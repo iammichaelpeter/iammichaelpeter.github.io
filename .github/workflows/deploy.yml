@@ -31,9 +31,11 @@ jobs:
       - run: npm ci
       - run: npm run build
 
-      - run: |
-          cp dist/iammichaelpeter.github.io/browser/index.html dist/iammichaelpeter.github.io/browser/404.html
-          touch dist/iammichaelpeter.github.io/browser/.nojekyll
+      - name: Setup 404 and nojekyll
+        working-directory: dist/iammichaelpeter.github.io/browser
+        run: |
+          cp index.html 404.html
+          touch .nojekyll
 
       - uses: actions/configure-pages@v4
       
