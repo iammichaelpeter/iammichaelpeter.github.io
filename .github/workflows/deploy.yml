@@ -27,7 +27,7 @@ jobs:
       - name: Build
         run: npm run build
 
-      # Debugging-Schritt hinzufügen
+      # Debugging-Schritt
       - name: List dist directory
         run: ls -la dist/iammichaelpeter.github.io/
 
@@ -39,11 +39,9 @@ jobs:
       - name: Add .nojekyll file
         run: touch dist/iammichaelpeter.github.io/browser/.nojekyll
 
+      # Geänderter Deploy-Schritt
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist/iammichaelpeter.github.io/browser
-          publish_branch: main
-          force_orphan: false
-          commit_message: "Deploy: ${{ github.event.head_commit.message }}"
+          folder: dist/iammichaelpeter.github.io/browser
+          clean: true
