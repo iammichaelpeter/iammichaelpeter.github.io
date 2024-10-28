@@ -1,37 +1,45 @@
-name: Build & Deploy to GitHub Pages
+name: Deploy Angular App to GitHub Pages
 
 on:
   push:
     branches: ["main"]
+
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
-      actions: write
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 23.1.0
-          
+          node-version: '23.1.0'
+
       - name: Install dependencies
         run: npm install
-        
-      - name: Build
+
+      - name: Build the Angular app
         run: npm run build
+
+      - name: Install angular-cli-ghpages
+        run: npm install -g angular-cli-ghpages
         
-      - name: Copy files to root
-        run: |
-          cp -r dist/iammichaelpeter.github.io/browser/* .
-          git add .
-          git commit -m "Deploy to GitHub Pages"
-          git push
+      - name: Deploy to GitHub Pages
+        run: npm run deploy
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
