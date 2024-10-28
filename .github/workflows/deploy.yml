@@ -32,10 +32,11 @@ jobs:
       - run: npm run build
 
       - name: Setup 404 and nojekyll
-        working-directory: dist/iammichaelpeter.github.io/browser
         run: |
-          cp index.html 404.html
-          touch .nojekyll
+          echo "Checking build output:"
+          ls -la dist/iammichaelpeter.github.io/browser/
+          cp "dist/iammichaelpeter.github.io/browser/index.html" "dist/iammichaelpeter.github.io/browser/404.html"
+          touch "dist/iammichaelpeter.github.io/browser/.nojekyll"
 
       - uses: actions/configure-pages@v4
       
