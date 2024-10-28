@@ -19,6 +19,11 @@ jobs:
       - name: Install dependencies
         run: npm install
         
+      - name: Setup Git
+        run: |
+          git config --global user.name "Michael Peter"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        
       - name: Build
         run: npm run build
         
@@ -26,4 +31,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          npm run ng -- deploy --base-href="/" --no-silent
+          npm run deploy
