@@ -4,11 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --configuration production",
+    "build": "ng build --configuration production --output-path=dist",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr": "node dist/iammichaelpeter/server/main.js",
-    "deploy": "ng deploy --base-href=/ --no-silent --name=\"Michael Peter\" --email=\"github-actions[bot]@users.noreply.github.com\""
+    "deploy": "ng deploy --base-href=$APP_BASE_HREF --repo=$REPOSITORY_NAME --branch=gh-pages --name=$REPOSITORY_USER --email=$REPOSITORY_EMAIL"
   },
   "private": true,
   "dependencies": {
