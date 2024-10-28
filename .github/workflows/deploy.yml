@@ -8,8 +8,12 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_TOKEN }}
       
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -23,12 +27,12 @@ jobs:
         run: |
           git config --global user.name "Michael Peter"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        
+          
       - name: Build
         run: npm run build
         
       - name: Deploy to Github pages
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           npm run deploy
