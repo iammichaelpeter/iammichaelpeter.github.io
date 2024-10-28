@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr": "node dist/iammichaelpeter.github.io/server/main.js",
-    "deploy": "ng deploy --base-href=/ --no-silent --name=\"Michael Peter\" --email=\"github-actions[bot]@users.noreply.github.com\" --repo=https://github.com/iammichaelpeter/iammichaelpeter.github.io.git"
+    "deploy": "ng deploy --base-href=/ --no-silent"
   },
   "private": true,
   "dependencies": {

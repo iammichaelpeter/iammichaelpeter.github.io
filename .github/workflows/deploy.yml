@@ -5,33 +5,31 @@ on:
     branches: ["main"]
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    # Explizite Permissions
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+      actions: write
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}  # Expliziter Token
       
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '23.1.0'
+          node-version: 23.1.0
           
       - name: Install dependencies
-        run: npm ci
+        run: npm install
         
       - name: Setup Git
         run: |
-          git config --global user.name "Michael Peter"
+          git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
       - name: Build
@@ -39,6 +37,7 @@ jobs:
         
       - name: Deploy to Github pages
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          npm run deploy
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
+          npm run ng -- deploy --base-href="/" --no-silent
