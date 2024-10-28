@@ -26,18 +26,12 @@ jobs:
       - name: Install dependencies
         run: npm install
         
-      - name: Setup Git
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
       - name: Build
         run: npm run build
         
-      - name: Deploy
+      - name: Copy files to root
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add -f dist/iammichaelpeter.github.io/browser
+          cp -r dist/iammichaelpeter.github.io/browser/* .
+          git add .
           git commit -m "Deploy to GitHub Pages"
-          git push origin HEAD:main
+          git push
