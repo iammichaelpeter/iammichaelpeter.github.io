@@ -40,3 +40,7 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Init .sh files
+setup-styles.sh
+setup-deployment.sh

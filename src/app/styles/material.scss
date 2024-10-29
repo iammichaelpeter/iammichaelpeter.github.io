@@ -1,0 +1,11 @@
+@use "@angular/material" as mat;
+@include mat.core();
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: Inter, "Helvetica Neue", sans-serif;
+}
