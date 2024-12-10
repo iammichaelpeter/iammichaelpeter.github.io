@@ -1,0 +1,8 @@
+services:
+  github-pages-simulation:
+    container_name: github-pages-sim
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80"

@@ -44,3 +44,7 @@ Thumbs.db
 # Init .sh files
 setup-styles.sh
 setup-deployment.sh
+setup-structure-ps.sh
+
+# environment variables
+/src/environments
