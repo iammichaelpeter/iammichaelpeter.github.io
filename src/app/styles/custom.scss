@@ -1,1 +1,18 @@
-// Custom styles
+/* Google Fonts */
+@import "../../../public/scss/inter-font.scss";
+
+/* Material Symbols */
+@import "../../../public/scss/material-icons.scss";
+
+
+// Custom Styling for the notficiations
+.mat-mdc-snack-bar-container {
+  &.notification-panel {
+    --mdc-snackbar-container-color: var(--md-sys-color-surface-container);
+
+    .mdc-snackbar__surface {
+      background-color: var(--md-sys-color-surface-container);
+      box-shadow: var(--mat-elevation-z6);
+    }
+  }
+}

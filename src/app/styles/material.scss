@@ -3,9 +3,30 @@
 
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    font-family: Inter, "Helvetica Neue", sans-serif;
+  font-family: Inter, sans-serif;
+}
+
+$compact-theme: mat.define-theme((density: (scale: -2)));
+
+:root {
+    @include mat.form-field-density($compact-theme);
+}
+
+$custom-theme: mat.define-theme(
+  (
+    color: (
+      use-system-variables: true,
+    ),
+    typography: (
+      plain-family: 'Inter, "Helvetica Neue", sans-serif,',
+    ),
+  )
+);
+
+html {
+  @include mat.all-component-themes($custom-theme);
 }
