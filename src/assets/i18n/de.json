@@ -1,0 +1,111 @@
+{
+  "common": {
+    "header": {
+      "aboutButtonLabel": "About",
+      "projectButtonLabel": "Projects",
+      "githubButtonLabel": "GitHub"
+    },
+    "footer": {
+      "aboutButtonLabel": "About",
+      "projectButtonLabel": "Projects",
+      "imprintButtonLabel": "Imprint",
+      "legalNoticeButtonLabel": "Legal Notice",
+      "portfolioCopyright": "© 2024 Michael Peter"
+    },
+    "notifications": {
+      "success": {
+        "title": "Erfolgreich",
+        "emailSent": "Nachricht erfolgreich gesendet",
+        "emailDescription": "Vielen Dank für Ihre Nachricht. Ich werde mich in Kürze bei dir melden."
+      },
+      "error": {
+        "title": "Fehler",
+        "emailError": "Nachricht konnte nicht gesendet werden",
+        "emailDescription": "Bitte versuchen Sie es später erneut oder kontaktieren Sie mich direkt."
+      }
+    }
+  },
+  "hero": {
+    "title": "Hey, ich heiße Michael. Ich bin ein begeisterter Webentwickler mit dem Ziel, intuitive Web-Erlebnisse zu schaffen.",
+    "description": "Als autodidaktischer Entwickler glaube ich an kontinuierliches Lernen und das Lösen von realen Problemen durch sauberen Code. Mein Weg in der Technik wird von Neugier und dem Wunsch getrieben, Anwendungen zu erstellen, die einen Unterschied machen."
+  },
+  "stack": {
+    "title": "Technologien, die mich begeistern",
+    "frontendCard": {
+      "title": "Modern Web Applications",
+      "description": "Entwicklung moderner Webanwendungen mit Angular, TypeScript und NgRx State Management. Nutzung von Standalone-Architektur und modernen Features wie Signals zur Erstellung reaktiver, performanter Single Page Applications mit hoher Code-Qualität."
+    },
+    "baasCard": {
+      "title": "Backend Services & Data Management",
+      "description": "Entwicklung mit Supabase als cloudbasierte Backend-Lösung, mit Fokus auf relationale Datenbanken und zusätzlichen Features wie Authentifizierung, Storage und Realtime. Nutzung von Infrastructure-as-Code und Versionskontrolle für eine wartbare Entwicklung."
+    },
+    "stylingCard": {
+      "title": "Design Systems",
+      "description": "Umsetzung responsiver Benutzeroberflächen mit Angular Material Components und Tailwind CSS. Entwicklung modularer UI-Komponenten für ein durchgängiges, nutzerfreundliches und barrierefreies Design."
+    },
+    "cicdCard": {
+      "title": "Development Operations",
+      "description": "Implementierung kontinuierlicher Entwicklungsprozesse mit Git und GitHub für strukturierte Versionskontrolle. Einsatz von Docker und Docker-Compose für lokale Entwicklungsumgebungen und Deployment-Tests mit nginx. Erste Erfahrungen mit automatisiertem Deployment durch GitHub Actions auf GitHub Pages."
+    },
+    "mobileDevelopmentCard": {
+      "title": "Cross-Platform Development",
+      "description": "Einführung in die Cross-Platform Entwicklung mit dem Ionic Framework und Angular. Integration von Backend-Services und Verwendung nativer UI-Komponenten. Interesse an der Entwicklung plattformübergreifender mobiler Anwendungen."
+    }
+  },
+  "contact": {
+    "title": "Lass uns in Kontakt treten",
+    "subtitle": "Ich melde mich schnellstmöglich zurück.",
+    "firstNameFieldLabel": "Vorname",
+    "lastNameFieldLabel": "Nachname",
+    "companyFieldLabel": "Unternehmen",
+    "emailFieldLabel": "E-Mail",
+    "messageFieldLabel": "Nachricht",
+    "dataProtectionAcceptedText": "Ich willige ein, dass meine Angaben zur Kontaktaufnahme und Bearbeitung meiner Anfrage durch den technischen Dienstleister Formspree verarbeitet werden. Die Daten werden in den USA verarbeitet. Weitere Informationen finden Sie in der",
+    "dataProtectionAcceptedLinkLabel": "Datenschutzerklärung",
+    "dataProtectionAcceptedRevocation": "Die Einwilligung können Sie jederzeit widerrufen.",
+    "contactIntentionText": "\"Ich bin immer offen für neue Kooperationen und den Austausch über Projekte, die echten Mehrwert schaffen. Schau dir gerne meine sozialen Profile an und kontaktiere mich über deinen bevorzugten Kanal.\""
+  },
+  "projects": {
+    "title": "Hier entsteht etwas Spannendes...",
+    "subtitle": "Aktuell arbeite ich an mehreren interessanten Projekten, die ich hier in Kürze vorstellen werde. Bleib gespannt!",
+    "followMyJourneyButtonLabel": "Begleite meinen Weg",
+    "slogan": "\"Ideen Schritt für Schritt verwirklichen\" 🚀"
+  },
+  "imprint": {
+    "title": "Impressum",
+    "provider": {
+      "title": "Anbieter",
+      "name": "Michael Peter",
+      "street": "Ansbacher Str. 3",
+      "location": "91459 Markt Erlbach"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "email": "E-Mail: contact.iammichaelpeter@gmail.com",
+      "form_notice": "Für Anfragen kannst du auch das Kontaktformular auf meiner Startseite verwenden."
+    },
+    "disclaimer": {
+      "title": "Haftungsausschluss",
+      "content": "Ich bin für die Inhalte meiner Internetseiten nach den Maßgaben der allgemeinen Gesetzen verantwortlich. Alle Inhalte werden mit der gebotenen Sorgfalt und nach bestem Wissen erstellt. Soweit ich auf meiner Internetseite mittels Hyperlink auf Internetseiten Dritter verweise, kann ich keine Gewähr für die fortwährende Aktualität, Richtigkeit und Vollständigkeit der verlinkten Inhalte übernehmen, da diese Inhalte außerhalb meines Verantwortungsbereichs liegen und ich auf die zukünftige Gestaltung keinen Einfluss habe. Sollten aus Ihrer Sicht Inhalte gegen geltendes Recht verstoßen oder unangemessen sein, teilen Sie mir dies bitte mit.",
+      "legal_jurisdiction": "Die rechtlichen Hinweise auf dieser Seite sowie alle Fragen und Streitigkeiten im Zusammenhang mit der Gestaltung dieser Internetseite unterliegen dem Recht der Bundesrepublik Deutschland."
+    },
+    "privacy": {
+      "title": "Datenschutz",
+      "content": "Meine Datenschutzerklärung findest du unter:",
+      "link": "https://iammichaelpeter.github.io/legal/notice"
+    },
+    "copyright": {
+      "title": "Urheberrecht",
+      "content": "Die auf meiner Internetseite vorhandenen Texte, Bilder, Fotos, Videos oder Grafiken unterliegen in der Regel dem Schutz des Urheberrechts. Jede unberechtigte Verwendung (insbesondere die Vervielfältigung, Bearbeitung oder Verbreitung) dieser urheberrechtsgeschützten Inhalte ist daher untersagt. Wenn Sie beabsichtigen, diese Inhalte oder Teile davon zu verwenden, kontaktieren Sie mich bitte im Voraus unter den oben stehenden Angaben. Soweit ich nicht selbst Inhaber der benötigten urheberrechtlichen Nutzungsrechte sein sollte, bemühe ich mich, einen Kontakt zum Berechtigten zu vermitteln."
+    },
+    "footer": {
+      "created_with": "Erstellt mit freundlicher Unterstützung von",
+      "privacy_tool": "Dieter macht den Datenschutz"
+    }
+  },
+  "legalNotice": {
+    "title": "Datenschutz",
+    "cardTitle": "Datenschutzerklärung",
+    "cardSubtitle": "PDF Download"
+  }
+}

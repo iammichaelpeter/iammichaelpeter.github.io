@@ -1,0 +1,111 @@
+{
+  "common": {
+    "header": {
+      "aboutButtonLabel": "About",
+      "projectButtonLabel": "Projects",
+      "githubButtonLabel": "GitHub"
+    },
+    "footer": {
+      "aboutButtonLabel": "About",
+      "projectButtonLabel": "Projects",
+      "imprintButtonLabel": "Imprint",
+      "legalNoticeButtonLabel": "Legal Notice",
+      "portfolioCopyright": "© 2024 Michael Peter"
+    },
+    "notifications": {
+      "success": {
+        "title": "Success",
+        "emailSent": "Message sent successfully",
+        "emailDescription": "Thank you for your message. I will get back to you soon."
+      },
+      "error": {
+        "title": "Error",
+        "emailError": "Failed to send message",
+        "emailDescription": "Please try again later or contact me directly."
+      }
+    }
+  },
+  "hero": {
+    "title": "Hey, I'm Michael. I'm a passionate frontend developer who loves creating intuitive web experiences.",
+    "description": "As a self-taught developer, I believe in continuous learning and solving real-world problems through clean code. My journey in tech is driven by curiosity and the desire to build applications that make a difference."
+  },
+  "stack": {
+    "title": "Technologies I'm passionate about",
+    "frontendCard": {
+      "title": "Modern Web Applications",
+      "description": "Building modern web applications with Angular, TypeScript and NgRx state management. Using standalone architecture and modern features like Signals to create reactive, high-performance single page applications with clean code."
+    },
+    "baasCard": {
+      "title": "Backend Services & Data Management",
+      "description": "Development with Supabase as a cloud-based backend solution, focusing on relational databases with additional features like authentication, storage and realtime. Using infrastructure as code and version control for maintainable development."
+    },
+    "stylingCard": {
+      "title": "Design Systems",
+      "description": "Building responsive user interfaces using Angular Material Components and Tailwind CSS. Creating modular UI components for consistent, user-friendly and accessible design."
+    },
+    "cicdCard": {
+      "title": "Development Operations",
+      "description": "Implementation of continuous development workflows with Git and GitHub for structured version control. Using Docker and Docker-Compose for local development environments and nginx-based deployment testing. First steps in automated deployment using GitHub Actions to GitHub Pages."
+    },
+    "mobileDevelopmentCard": {
+      "title": "Cross-Platform Development",
+      "description": "Introduction to cross-platform development with the Ionic Framework and Angular. Working with backend services and native UI components. Interest in developing cross-platform mobile applications."
+    }
+  },
+  "contact": {
+    "title": "Let's Connect",
+    "subtitle": "I'll get back to you as soon as possible.",
+    "firstNameFieldLabel": "First Name",
+    "lastNameFieldLabel": "Last Name",
+    "companyFieldLabel": "Company",
+    "emailFieldLabel": "Email",
+    "messageFieldLabel": "Message",
+    "dataProtectionAcceptedText": "I consent to my contact details and inquiry being processed by the technical service provider Formspree. The data will be processed in the United States. For more information, please refer to the",
+    "dataProtectionAcceptedLinkLabel": "Privacy Policy",
+    "dataProtectionAcceptedRevocation": "You may withdraw your consent at any time.",
+    "contactIntentionText": "\"I'm always eager to collaborate on meaningful projects and engage in discussions that create real value. Feel free to reach out through my social channels or any medium you prefer - I'm just a message away.\""
+  },
+  "projects": {
+    "title": "Something exciting is brewing...",
+    "subtitle": "I'm currently crafting some innovative projects that will be showcased here soon. Stay tuned for the reveal!",
+    "followMyJourneyButtonLabel": "Join My Journey",
+    "slogan": "\"Building tomorrow's solutions, one line at a time\" 🚀"
+  },
+  "imprint": {
+    "title": "Imprint",
+    "provider": {
+      "title": "Website Owner",
+      "name": "Michael Peter",
+      "street": "Ansbacher Str. 3",
+      "location": "91459 Markt Erlbach"
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "Email: contact.iammichaelpeter@gmail.com",
+      "form_notice": "You can also use the contact form on my homepage to get in touch."
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "content": "I am responsible for the content of this website in accordance with general laws. All content is created with due diligence and to the best of my knowledge. When linking to third-party websites through hyperlinks, I cannot guarantee the continued accuracy, completeness, or up-to-date nature of the linked content, as these contents are beyond my control and I have no influence on their future design. If you believe any content violates applicable law or is inappropriate, please let me know.",
+      "legal_jurisdiction": "The legal information on this page and all matters concerning this website are subject to the laws of the Federal Republic of Germany."
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "content": "You can find my privacy policy at:",
+      "link": "https://iammichaelpeter.github.io/legal"
+    },
+    "copyright": {
+      "title": "Copyright",
+      "content": "The texts, images, photos, videos, and graphics on this website are generally protected by copyright law. Any unauthorized use (particularly copying, editing, or distribution) of this copyrighted content is therefore prohibited. If you intend to use any of this content or parts thereof, please contact me in advance using the contact information provided above. If I am not the copyright holder of the required content, I will help to establish contact with the rightful owner."
+    },
+    "footer": {
+      "created_with": "Created with friendly support from",
+      "privacy_tool": "Dieter's Privacy Tools"
+    }
+  },
+  "legalNotice": {
+    "title": "Legal Notice",
+    "cardTitle": "Privacy Policy",
+    "cardSubtitle": "PDF Download"
+  }
+}
