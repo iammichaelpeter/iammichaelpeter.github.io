@@ -1,0 +1,116 @@
+<div class="absolute inset-px rounded-lg bg-surface-container"></div>
+
+<div class="relative flex h-full flex-col gap-6" 
+     (mouseenter)="startPipelineAnimation()"
+     (mouseleave)="resetAnimation()">
+
+    <h3 class="text-xl font-semibold">{{ 'stack.cicdCard.title' | transloco }}</h3>
+
+    <!-- Pipeline Container -->
+    <div #pipelineContainer
+         class="relative h-48 rounded-lg bg-white dark:bg-gray-900 p-4 border-4 border-tertiary overflow-hidden">
+
+        <!-- Main Pipeline Line -->
+        <div class="absolute inset-x-4 top-1/2 h-2 bg-gray-300 dark:bg-gray-600"></div>
+
+        <!-- Pipeline Sections Container -->
+        <div class="relative h-full flex justify-between px-4">
+            <!-- Build Station -->
+            <div #buildStation class="relative flex flex-col items-center">
+                <div class="absolute top-4 transition-all duration-700" 
+                     [class.opacity-0]="!isBuilding"
+                     [style.transitionDelay]="isBuilding ? '1000ms' : '0ms'">
+                    <span class="text-base">✅</span>
+                </div>
+                <div class="absolute w-0.5 h-8 bg-gray-300 dark:bg-gray-600 top-1/2"></div>
+                <div class="absolute top-[calc(50%+32px)] w-10 h-10 rounded-full bg-white dark:bg-gray-900 
+                           border-2 border-tertiary flex items-center justify-center overflow-hidden">
+                    <span class="text-lg transition-all duration-300" 
+                          [class.opacity-0]="!isBuilding">🔨</span>
+                </div>
+            </div>
+
+            <!-- Test Station -->
+            <div #testStation class="relative flex flex-col items-center">
+                <div class="absolute top-4 transition-all duration-700" 
+                     [class.opacity-0]="!isTesting"
+                     [style.transitionDelay]="isTesting ? '2000ms' : '0ms'">
+                    <span class="text-base">✅</span>
+                </div>
+                <div class="absolute w-0.5 h-8 bg-gray-300 dark:bg-gray-600 top-1/2"></div>
+                <div class="absolute top-[calc(50%+32px)] w-10 h-10 rounded-full bg-white dark:bg-gray-900 
+                           border-2 border-tertiary flex items-center justify-center overflow-hidden">
+                    <span class="text-lg transition-all duration-300"
+                          [style.transitionDelay]="isTesting ? '500ms' : '0ms'"
+                          [class.opacity-0]="!isTesting">🧪</span>
+                </div>
+            </div>
+
+            <!-- Deploy Station -->
+            <div #deployStation class="relative flex flex-col items-center">
+                <div class="absolute top-4 transition-all duration-700" 
+                     [class.opacity-0]="!isDeploying"
+                     [style.transitionDelay]="isDeploying ? '2500ms' : '0ms'">
+                    <span class="text-base">✅</span>
+                </div>
+                <div class="absolute w-0.5 h-8 bg-gray-300 dark:bg-gray-600 top-1/2"></div>
+                <div class="absolute top-[calc(50%+32px)] w-10 h-10 rounded-full bg-white dark:bg-gray-900 
+                           border-2 border-tertiary flex items-center justify-center overflow-hidden">
+                    <span class="text-lg transition-all duration-300"
+                          [style.transitionDelay]="isDeploying ? '1800ms' : '0ms'"
+                          [class.opacity-0]="!isDeploying">🚀</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Moving Container -->
+        <div class="absolute left-[calc(2rem-1rem)] top-16 -translate-y-1/2 z-10"
+             [@containerMovement]="{
+                 value: containerState,
+                 params: positions$ | async
+             }">
+            <div class="relative w-8 h-6 bg-white dark:bg-gray-900 shadow-lg border border-tertiary overflow-hidden">
+                <div class="flex h-full">
+                    <div class="flex-1 border-r border-tertiary bg-tertiary/10"></div>
+                    <div class="flex-1 border-r border-tertiary bg-tertiary/10"></div>
+                    <div class="flex-1 border-r border-tertiary bg-tertiary/10"></div>
+                    <div class="flex-1 bg-tertiary/10"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Moving Code -->
+        <div class="absolute -left-10 top-16 -translate-y-1/2 z-0" 
+             [@codeMovement]="codeState"
+             [class.hidden]="!isCodeVisible">
+            <mat-icon class="text-tertiary text-sm">code</mat-icon>
+        </div>
+    </div>
+
+    <p class="text-sm/6 text-on-surface-variant">{{ 'stack.cicdCard.description' | transloco }}</p>
+
+    <div class="mt-auto flex items-center gap-4">
+        <a href="https://git-scm.com/" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="block transform transition-all duration-300 hover:scale-110">
+            <img class="h-12 w-12" 
+                 src="logos/git-icon.svg" 
+                 alt="Git Logo"
+                 width="48"
+                 height="48">
+        </a>
+        <a href="https://www.docker.com" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="block transform transition-all duration-300 hover:scale-110">
+            <img class="h-12 w-12" 
+                 src="logos/docker-mark-blue.svg" 
+                 alt="Docker Logo"
+                 width="48"
+                 height="48">
+        </a>
+    </div>
+</div>
+
+<div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-outline"></div>
