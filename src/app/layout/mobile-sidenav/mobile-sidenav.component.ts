@@ -43,7 +43,7 @@ import { TranslocoPipe } from '@jsverse/transloco';
     </nav>
 
     <div class="mt-4 pt-4 border-t border-gray-300 dark:border-gray-600">
-      <button 
+      <a 
         mat-button
         href="https://github.com/iammichaelpeter/iammichaelpeter.github.io"
         target="_blank"
@@ -56,7 +56,7 @@ import { TranslocoPipe } from '@jsverse/transloco';
           </svg>
           <span>{{ 'common.header.githubButtonLabel' | transloco }}</span>
         </div>
-      </button>
+      </a>
     </div>
   </div>
 `
