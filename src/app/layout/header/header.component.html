@@ -5,7 +5,7 @@
                 <div class="h-16 hidden lg:flex lg:gap-x-6 border border-surface-variant px-6 rounded-full">
                     @for (item of config.navigationItems; track item.route) {
                     <button [routerLink]="item.route"
-                        class="text-md font-semibold flex items-center gap-1 hover:text-primary"
+                        class="text-md font-semibold flex items-center gap-1 text-on-background"
                         [attr.aria-label]="item.label">
                         <mat-icon>{{item.icon}}</mat-icon>
                         <span>{{item.label}}</span>
@@ -13,7 +13,7 @@
                     }
                 </div>
                 <button type="button"
-                    class="w-16 h-16 lg:hidden rounded-full border border-surface-variant flex items-center justify-center"
+                    class="w-16 h-16 lg:hidden rounded-full border border-surface-variant flex items-center justify-center text-on-background"
                     (click)="toggleCollapsed()" 
                     [attr.aria-expanded]="collapsed" 
                     aria-label="mobile-menu"
@@ -26,11 +26,11 @@
                     (click)="onDarkModeToggle()"
                     class="w-16 h-16 flex items-center justify-center rounded-full border border-surface-variant"
                     [attr.aria-label]="darkMode() ? 'Switch to light mode' : 'Switch to dark mode'">
-                    <mat-icon>{{darkMode() ? 'light_mode' : 'dark_mode'}}</mat-icon>
+                    <mat-icon class="text-on-background">{{darkMode() ? 'light_mode' : 'dark_mode'}}</mat-icon>
                 </button>
                 <button type="button" 
                     [matMenuTriggerFor]="languageMenu"
-                    class="h-16 w-[120px] flex items-center justify-center gap-2 font-semibold rounded-full border border-surface-variant"
+                    class="h-16 w-[120px] flex items-center justify-center gap-2 font-semibold rounded-full border border-surface-variant text-on-background"
                     [attr.aria-label]="'Change language. Current language is ' + currentLanguage()">
                     <span>{{currentLanguage() | uppercase}}</span>
                     <mat-icon>arrow_drop_down</mat-icon>
@@ -49,7 +49,7 @@
                 <a [href]="config.githubUrl" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    class="hidden sm:flex items-center justify-center h-16 w-[140px] gap-2 font-semibold rounded-full border border-surface-variant"
+                    class="hidden sm:flex items-center justify-center h-16 w-[140px] gap-2 font-semibold rounded-full border border-surface-variant text-on-background"
                     aria-label="View source on GitHub">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path fill-rule="evenodd"

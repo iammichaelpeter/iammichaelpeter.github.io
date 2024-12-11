@@ -28,7 +28,14 @@ import { SettingsService } from './core/services/settings.service';
     FooterComponent
   ],
   template: `
-    <mat-sidenav-container
+  <div class="flex flex-col h-screen overflow-hidden">
+    <app-header
+      class="flex-none"
+      [(collapsed)]="collapsed"
+    ></app-header>
+
+    <mat-sidenav-container 
+      class="flex-1 overflow-hidden"
       [hasBackdrop]="true"
       (backdropClick)="collapsed.set(false)"
     >
@@ -42,57 +49,45 @@ import { SettingsService } from './core/services/settings.service';
         ></app-mobile-sidenav>
       </mat-sidenav>
       
-      <mat-sidenav-content>
-        <div class="flex flex-col min-h-screen">
-          <app-header
-            [(collapsed)]="collapsed"
-          ></app-header>
-          
-          @if (loading()) {
-            <div
-              class="flex-1 animate-pulse"
-              role="progressbar"
-              aria-label="Loading content"
-            >
-              <div class="h-screen bg-surface-variant/20"></div>
-            </div>
-          }
-          
-          <main
-            class="flex-1"
-            [class.opacity-0]="loading()"
-            [attr.aria-hidden]="loading()"
-            role="main"
+      <mat-sidenav-content class="overflow-auto">
+        @if (loading()) {
+          <div
+            class="flex-1 animate-pulse"
+            role="progressbar"
+            aria-label="Loading content"
           >
-            <router-outlet></router-outlet>
-          </main>
-          
-          <app-footer></app-footer>
-        </div>
+            <div class="h-screen bg-surface-variant/20"></div>
+          </div>
+        }
+        
+        <main
+          class="min-h-[calc(100vh-theme(spacing.24)-theme(spacing.16))]"
+          [class.opacity-0]="loading()"
+          [attr.aria-hidden]="loading()"
+          role="main"
+        >
+          <router-outlet></router-outlet>
+        </main>
+        
+        <app-footer></app-footer>
       </mat-sidenav-content>
     </mat-sidenav-container>
-  `,
+  </div>
+`,
   styles: [`
-    :host {
-      display: block;
-      height: 100vh;
-      width: 100%;
-    }
-
     mat-sidenav-container {
-      height: 100%;
       transform: translateZ(0);
       will-change: transform;
     }
 
     mat-sidenav {
-      width: 280px;
+      width: 160px;
     }
-  `]
+`]
 })
 export class AppComponent {
   private readonly settingsService = inject(SettingsService);
-  
+
   protected readonly collapsed = signal(false);
   protected readonly loading = signal(true);
 
