@@ -1,0 +1,21 @@
+
+:host {
+    --header-height: 88px;
+
+    .mobile-menu {
+        transform-origin: top;
+        animation: slideIn 0.2s ease-out;
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: scaleY(0);
+            opacity: 0;
+        }
+
+        to {
+            transform: scaleY(1);
+            opacity: 1;
+        }
+    }
+}
