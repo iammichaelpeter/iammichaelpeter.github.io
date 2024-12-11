@@ -1,24 +1,20 @@
 <div class="absolute inset-px rounded-lg bg-surface-container lg:rounded-bl-[2rem]"></div>
 
 <div class="relative flex h-full flex-col gap-6">
-
     <h3 class="text-xl font-semibold">{{ 'stack.stylingCard.title' | transloco }}</h3>
 
+    @if (showAnimations) {
     <div class="relative h-48 rounded-lg overflow-hidden border-4 border-tertiary">
-        <!-- Card Container mit Hover-Transformation -->
         <div class="relative w-full h-full transition-all duration-500 group-hover:scale-[1.02]">
-            <!-- Unstyled Elements (Pre-hover) -->
             <div class="absolute inset-0 flex flex-col gap-2 p-4 transition-all duration-500 
-            bg-white dark:bg-gray-900
-           group-hover:opacity-0 group-hover:scale-95">
-                <!-- Basic Profile Area -->
+                bg-white dark:bg-gray-900
+               group-hover:opacity-0 group-hover:scale-95">
                 <div class="flex gap-2">
                     <div class="w-8 h-8 bg-gray-200 dark:bg-gray-700">
                     </div>
                     <div class="h-8 bg-gray-200 dark:bg-gray-700 flex-grow">
                     </div>
                 </div>
-                <!-- Basic Content -->
                 <div class="w-full h-6 bg-gray-200 dark:bg-gray-700">
                 </div>
                 <div class="w-4/5 h-6 bg-gray-200 dark:bg-gray-700">
@@ -26,16 +22,13 @@
                 <div class="w-3/5 h-6 bg-gray-200 dark:bg-gray-700">
                 </div>
             </div>
-
-            <!-- Styled Elements (Post-hover) -->
             <div class="absolute inset-0 flex flex-col gap-3 opacity-0 scale-95 
-           transition-all duration-500 
-           bg-gradient-to-br from-primary to-[#2C4F4D]
-           group-hover:opacity-100 group-hover:scale-100">
-                <!-- Styled Profile Area -->
+               transition-all duration-500 
+               bg-gradient-to-br from-primary to-[#2C4F4D]
+               group-hover:opacity-100 group-hover:scale-100">
                 <div class="flex items-center gap-3 p-4">
                     <div class="w-10 h-10 rounded-full bg-white/90 shadow-md 
-                              flex items-center justify-center">
+                                  flex items-center justify-center">
                         <mat-icon class="text-primary">account_circle</mat-icon>
                     </div>
                     <div class="flex-grow">
@@ -43,7 +36,6 @@
                         <div class="h-3 bg-white/20 rounded w-1/3"></div>
                     </div>
                 </div>
-                <!-- Styled Content -->
                 <div class="space-y-2 px-4">
                     <div class="h-4 bg-white/20 rounded w-full"></div>
                     <div class="h-4 bg-white/15 rounded w-5/6"></div>
@@ -52,6 +44,7 @@
             </div>
         </div>
     </div>
+    }
 
     <p class="text-sm/6 text-on-surface-variant">{{ 'stack.stylingCard.description' | transloco }}</p>
 
@@ -65,9 +58,7 @@
             <img class="h-12 w-12" src="logos/tailwindcss-mark.svg" alt="Tailwind CSS Logo">
         </a>
     </div>
-    
 </div>
 
-<div
-    class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-outline lg:rounded-bl-[2rem]">
+<div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-outline lg:rounded-bl-[2rem]">
 </div>
